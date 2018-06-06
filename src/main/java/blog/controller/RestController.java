@@ -56,6 +56,31 @@ public class RestController {
     public Iterable<Post> getAllPosts(){
         return postRepo.findAll();
     }
+
+    @PostMapping("/api/editpost/")
+    public String editPosts(@RequestParam("id") Long postId,@RequestParam("username") String uname,@RequestParam("password") String password,@RequestParam("title") String title,@RequestParam("body") String body) {
+
+        if(postRepo.findPostById(postId)== null){
+            return "There is no post with "+ postId + " in the existing database";
+        }
+        String postOwner=postRepo.findUserByPostId(postId);
+        if (!postOwner.equalsIgnoreCase(uname))
+            return "You have no right to edit other users post";
+
+        String passwordByUser = String.valueOf(userRepo.findUserPassword(uname));
+
+
+        String sha256hex = Hashing.sha256()
+                .hashString(password, Charsets.US_ASCII)
+                .toString();
+        if (!(sha256hex.equalsIgnoreCase(passwordByUser))) {
+            return "Invalid credentials";
+        }
+
+        postRepo.editPostValues(body,title, postId);
+        return "the edits have been updated for the posts with new title" +title;
+
+    }
 }
 
 
