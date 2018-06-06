@@ -1,5 +1,6 @@
 package blog.controller;
 
+import blog.repository.PostRepository;
 import blog.repository.UserRepository;
 import com.google.common.base.Charsets;
 import com.google.common.hash.Hashing;
@@ -9,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
+
+    @Autowired
+    PostRepository postRepo;
+
+
     @Autowired
     UserRepository userRepo;
 
@@ -21,15 +27,29 @@ public class RestController {
                 .toString();
 
         if ((result.equalsIgnoreCase("null"))) {
-            userRepo.addUserCredentials(uname, fullName,sha256hex);
+            userRepo.addUserCredentials(uname, fullName, sha256hex);
             return uname + ", you successfully registered";
         } else {
             return "user already exists";
+        }
+    }
+        @PostMapping("/api/createpost/")
+        public String createPost(@RequestParam("username") String uname,@RequestParam("password") String password,@RequestParam("title") String title,@RequestParam("post body") String body) {
+            String passwordByUser = String.valueOf(userRepo.findUserPassword(uname));
+
+            String sha256hex = Hashing.sha256()
+                    .hashString(password, Charsets.US_ASCII)
+                    .toString();
+            if (!(sha256hex.equalsIgnoreCase(passwordByUser))) {
+                return "Invalid credentials";
+            }
+            int id = (int) (System.currentTimeMillis()%1000);
+            postRepo.addPostValues(id, body,title,uname);
+            return "Your post with title "+title + " is created";
+
         }
 
     }
 
 
 
-
-}

@@ -18,4 +18,8 @@ public interface UserRepository extends CrudRepository<User, String> {
     @Modifying
     @Query(nativeQuery = true,value="INSERT INTO users (username,fullname,passwordhash) VALUES (?1,?2,?3)")
     void addUserCredentials(String uname,String password,String fullName);
+
+    @Query(nativeQuery = true,value="SELECT passwordhash FROM users WHERE UPPER(username)= UPPER(?1)")
+    String findUserPassword(String user1);
+
 }

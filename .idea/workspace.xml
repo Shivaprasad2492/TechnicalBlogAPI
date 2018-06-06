@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7756ee03-b45f-4b18-a665-130b99a22d17" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/blog/common/SessionManager.java" afterPath="$PROJECT_DIR$/src/main/java/blog/common/SessionManager.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/blog/controller/RestController.java" afterPath="$PROJECT_DIR$/src/main/java/blog/controller/RestController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/blog/common/SessionManager.class" afterPath="$PROJECT_DIR$/target/classes/blog/common/SessionManager.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/blog/controller/RestController.class" afterPath="$PROJECT_DIR$/target/classes/blog/controller/RestController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/blog/model/Comments.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/blog/model/Likes.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/blog/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/blog/repository/UserRepository.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,18 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Post.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/blog/model/Post.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/blog/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,6 +55,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PostController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/blog/controller/PostController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="66" column="8" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SwaggerConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/blog/config/SwaggerConfig.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RestController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/blog/controller/RestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="17" column="70" lean-forward="true" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+            <state relative-caret-position="268">
+              <caret line="45" column="61" lean-forward="true" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,15 +87,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/blog/repository/UserRepository.java">
+      <file leaf-file-name="PostRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/blog/repository/PostRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="200">
+              <caret line="14" column="114" lean-forward="false" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="114" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1528204533461" expanded="true" signature="434:488" ph="SELECT * FRO... users" />
-                <marker date="1528204533461" expanded="true" signature="604:672" ph="INSERT INTO users... " />
+                <marker date="1528260235997" expanded="true" signature="467:545" ph="INSERT INTO post... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/blog/repository/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="21" column="88" lean-forward="false" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1528207326135" expanded="true" signature="434:488" ph="SELECT * FRO... users" />
+                <marker date="1528207326135" expanded="true" signature="604:672" ph="INSERT INTO users... " />
+                <marker date="1528207326135" expanded="true" signature="788:851" ph="SELECT passw... users" />
               </folding>
             </state>
           </provider>
@@ -120,23 +125,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/blog/model/Category.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -198,12 +193,12 @@
         <option value="$PROJECT_DIR$/src/main/java/blog/model/Likes.java" />
         <option value="$PROJECT_DIR$/src/main/java/blog/model/Comments.java" />
         <option value="$PROJECT_DIR$/src/main/java/blog/model/Post.java" />
-        <option value="$PROJECT_DIR$/src/main/java/blog/repository/PostRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/blog/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/blog/common/SessionManager.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/blog/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/repository/PostRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/blog/controller/RestController.java" />
       </list>
     </option>
@@ -516,12 +511,12 @@
       <workItem from="1527950780049" duration="4533000" />
       <workItem from="1527955354185" duration="197000" />
       <workItem from="1527955778906" duration="33321000" />
-      <workItem from="1528196815845" duration="8678000" />
+      <workItem from="1528196815845" duration="11315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52977000" />
+    <option name="totallyTimeSpent" value="55614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -543,7 +538,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33700788" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33700788" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -603,7 +598,7 @@
         <state relative-caret-position="688">
           <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding>
-            <element signature="e#1042#1043#0" expanded="false" />
+            <element signature="e#1129#1130#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -808,14 +803,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/blog/model/Comment.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/blog/controller/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/blog/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -848,14 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/blog/repository/PostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="33" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/blog/model/ProfilePhoto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -869,7 +848,7 @@
         <state relative-caret-position="357">
           <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -946,24 +925,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/blog/controller/RestController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" column="70" lean-forward="true" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+        <state relative-caret-position="293">
+          <caret line="21" column="88" lean-forward="false" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1528207326135" expanded="true" signature="434:488" ph="SELECT * FRO... users" />
+            <marker date="1528207326135" expanded="true" signature="604:672" ph="INSERT INTO users... " />
+            <marker date="1528207326135" expanded="true" signature="788:851" ph="SELECT passw... users" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/blog/repository/UserRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/controller/PostController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="66" column="8" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/repository/PostRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="114" lean-forward="false" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="114" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1528204533461" expanded="true" signature="434:488" ph="SELECT * FRO... users" />
-            <marker date="1528204533461" expanded="true" signature="604:672" ph="INSERT INTO users... " />
+            <marker date="1528260235997" expanded="true" signature="467:545" ph="INSERT INTO post... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/controller/RestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="45" column="61" lean-forward="true" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
