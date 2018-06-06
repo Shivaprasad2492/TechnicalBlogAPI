@@ -17,6 +17,8 @@ public class SessionManager {
         configuration.addAnnotatedClass(Post.class);
         configuration.addAnnotatedClass(ProfilePhoto.class);
         configuration.addAnnotatedClass(Category.class);
+        configuration.addAnnotatedClass(Likes.class);
+        configuration.addAnnotatedClass(Comments.class);
         configuration.configure("hibernate.cfg.xml");
 
         SessionFactory sessionFactory = configuration.buildSessionFactory();

@@ -25,4 +25,5 @@ public interface PostRepository extends CrudRepository<Post, Integer>{
 
     @Query(nativeQuery = true,value="select id from post where id=?1")
     Long findPostById(Long id);
+
 }
