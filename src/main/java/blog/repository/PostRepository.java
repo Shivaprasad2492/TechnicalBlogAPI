@@ -13,6 +13,6 @@ public interface PostRepository extends CrudRepository<Post, Integer>{
     @Transactional
     @Modifying
     @Query(nativeQuery = true,value="INSERT INTO post (id,body,date,title,user_username) VALUES (?1,?2,NOW(),?3,?4)")
-    void addPostValues(int id, String body,String title,String username);
+    void addPostValues(Long id, String body, String title, String username);
 
 }

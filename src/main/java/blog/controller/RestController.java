@@ -1,10 +1,12 @@
 package blog.controller;
 
+import blog.model.Post;
 import blog.repository.PostRepository;
 import blog.repository.UserRepository;
 import com.google.common.base.Charsets;
 import com.google.common.hash.Hashing;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -33,23 +35,23 @@ public class RestController {
             return "user already exists";
         }
     }
-        @PostMapping("/api/createpost/")
-        public String createPost(@RequestParam("username") String uname,@RequestParam("password") String password,@RequestParam("title") String title,@RequestParam("post body") String body) {
-            String passwordByUser = String.valueOf(userRepo.findUserPassword(uname));
 
-            String sha256hex = Hashing.sha256()
-                    .hashString(password, Charsets.US_ASCII)
-                    .toString();
-            if (!(sha256hex.equalsIgnoreCase(passwordByUser))) {
-                return "Invalid credentials";
-            }
-            int id = (int) (System.currentTimeMillis()%1000);
-            postRepo.addPostValues(id, body,title,uname);
-            return "Your post with title "+title + " is created";
+    @PostMapping("/api/createpost/")
+    public String createPost(@RequestParam("username") String uname, @RequestParam("password") String password, @RequestParam("title") String title, @RequestParam("post body") String body) {
+        String passwordByUser = String.valueOf(userRepo.findUserPassword(uname));
 
+        String sha256hex = Hashing.sha256()
+                .hashString(password, Charsets.US_ASCII)
+                .toString();
+        if (!(sha256hex.equalsIgnoreCase(passwordByUser))) {
+            return "Invalid credentials";
         }
+        Long id = System.currentTimeMillis() % 1000;
+        postRepo.addPostValues(id, body, title, uname);
+        return "Your post with title " + title + " is created";
 
     }
+}
 
 
 
