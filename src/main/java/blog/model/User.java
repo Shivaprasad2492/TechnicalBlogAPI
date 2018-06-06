@@ -14,7 +14,7 @@ public class User implements Serializable {
 
     @Id
     @Column
-    private String user_Name;
+    private String userName;
 
 
     @Column
@@ -35,16 +35,16 @@ public class User implements Serializable {
     }
 
     public User(String userName, String fullName) {
-        this.user_Name = userName;
+        this.userName = userName;
         this.fullName = fullName;
     }
 
     public String getUserName() {
-        return user_Name;
+        return userName;
     }
 
     public void setUserName(String userName) {
-        this.user_Name = userName;
+        this.userName = userName;
     }
 
     public String getPasswordHash() {

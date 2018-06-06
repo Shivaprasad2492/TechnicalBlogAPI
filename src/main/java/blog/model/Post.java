@@ -88,4 +88,5 @@ public class Post implements Serializable {
     public void setCategoryList(List<Category> categoryList) {
         this.categoryList = categoryList;
     }
+
 }

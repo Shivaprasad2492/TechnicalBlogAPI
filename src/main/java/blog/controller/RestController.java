@@ -51,6 +51,11 @@ public class RestController {
         return "Your post with title " + title + " is created";
 
     }
+
+    @GetMapping("/api/allposts")
+    public Iterable<Post> getAllPosts(){
+        return postRepo.findAll();
+    }
 }
 
 
