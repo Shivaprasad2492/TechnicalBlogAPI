@@ -52,6 +52,7 @@ public class PostController {
             category.setId(0);
             category.setCategoryType(createPost.getSpringBlog());
             categories.add(category);
+            System.out.print("Hello");
         }
 
         if(createPost.getJavaBlog()!=null){
@@ -59,6 +60,7 @@ public class PostController {
             category.setId(1);
             category.setCategoryType(createPost.getJavaBlog());
             categories.add(category);
+            System.out.print("Hello");
         }
 
         post.setCategoryList(categories);
@@ -66,6 +68,7 @@ public class PostController {
         post.setUser(user);
         post.setId(System.currentTimeMillis()%1000);
         postService.create(post);
+        System.out.print("Hello");
         return "redirect:/posts";
     }
 }
